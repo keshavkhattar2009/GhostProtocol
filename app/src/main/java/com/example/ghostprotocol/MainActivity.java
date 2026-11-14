@@ -3,6 +3,7 @@ package com.example.ghostprotocol;
 import android.Manifest;
 import android.app.ActivityManager;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -271,6 +272,23 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.dispatchTouchEvent(ev);
+    }
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (fakeShutdownActive) {
+            return true;
+        }
+
+        if (!unlocked) {
+            int keyCode = event.getKeyCode();
+            if (keyCode == KeyEvent.KEYCODE_VOLUME_UP
+                    || keyCode == KeyEvent.KEYCODE_VOLUME_DOWN
+                    || keyCode == KeyEvent.KEYCODE_VOLUME_MUTE) {
+                return true;
+            }
+        }
+
+        return super.dispatchKeyEvent(event);
     }
 
     // ===================================================================== UI BUILD
