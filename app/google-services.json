@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "697638270770",
+    "project_id": "ghostprotocol-605ff",
+    "storage_bucket": "ghostprotocol-605ff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697638270770:android:e2207e5449c099ae9bc92b",
+        "android_client_info": {
+          "package_name": "com.example.ghostprotocol"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNcwmRVsnvqUdZ-nNTsaXJmclJ2o0_U2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
